@@ -15,5 +15,3 @@ EXPOSE 8080
 
 # Run the entrypoint script which generates config.env and starts the app
 ENTRYPOINT ["./entrypoint.sh"]
-
-RUN npm run dev

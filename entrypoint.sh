@@ -1,11 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+set -e
 
 echo "Generating config.env..."
 
-cat <<EOF > /config.env
-DATABASE_URL=mongodb://root:rvCxs4Q1483XyS47Zl6l642yBKkGUDWXvwlluSAefIIVjbRdinhjM1uFHrelnMTW@xw0w8okc0c44c0sc4sgk48ok:27017/?directConnection=true
-PORT=8080
-SECRET_KEY=rvCxs4Q1483XyS47Zl6
+cat <<EOF > /usr/src/app/config.env
+DATABASE_URL=${DATABASE_URL}
+PORT=${PORT:-8080}
+SECRET_KEY=${SECRET_KEY}
 EOF
 
 echo "Config ENV created"
+
+# Now run the server
+exec node ./src/server.ts

@@ -19,6 +19,8 @@ mongoose.connection.on('disconnected', () => {
 });
 
 const connectDb = () => {
+	console.log('DATABASE_URL: ', process.env.DATABASE_URL)
+
 	return mongoose.connect(process.env.DATABASE_URL!, {
 		useCreateIndex: true,
 		useNewUrlParser: true,

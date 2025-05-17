@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import { config } from 'dotenv';
 import { resolve } from 'path';
 
-config({ path: resolve(__dirname, '../../config.env') });
+// config({ path: resolve(__dirname, '../../config.env') });
 
 mongoose.connection.on('connected', () => {
 	console.log('DB connected..');

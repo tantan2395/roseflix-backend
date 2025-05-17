@@ -7,6 +7,8 @@ RUN npm install
 
 COPY . .
 
+RUN npm run build
+
 # Make sure entrypoint.sh is executable
 RUN chmod +x entrypoint.sh
 

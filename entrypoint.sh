@@ -12,4 +12,4 @@ EOF
 echo "Config ENV created"
 
 # Now run the server
-exec node ./src/server.ts
+exec node ./dist/server.js
